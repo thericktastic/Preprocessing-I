@@ -1,19 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <!--links to css file, this is what LESS is compiling into-->
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </nav>
+    <header>
+      <title>
+        <h1>ERIK AHLGREN</h1>
+      </title>
+      <subtitle>
+        <h2>Web Developer</h2>
+      </subtitle>
+      <section class="contact-container">
+        <div class="phone"></div>
+        <div class="email"></div>
+        <div class="website"></div>
+        <div class="location"></div>
+      </section>
+    </header>
+    <section class="intro-container">
+      <div class="intro">
+        <h2>High Five</h2>
+        <p>
+          Here's a little intro to me. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Placeat, veniam sapiente totam temporibus laborum
+          reprehenderit assumenda voluptate itaque aliquid necessitatibus
+          molestias quo magnam illum consectetur, repellat molestiae explicabo
+          eum laboriosam!
+        </p>
+      </div>
+      <!--this closes the intro div-->
+      <div class="skills">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+        </ul>
+      </div>
+      <!--this closes the skills div-->
+    </section>
+    <section class="work-history">
+      <h2>Work History</h2>
+      <div class="job-1">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          incidunt natus quaerat itaque nulla. Deserunt nostrum facere explicabo
+          vitae beatae ducimus praesentium possimus sapiente debitis voluptas
+          consectetur, numquam excepturi impedit?
+        </p>
+        <ul>
+          <li>One thing I did.</li>
+          <li>Another thing I did.</li>
+          <li>Oh yeah, this too.</li>
+        </ul>
+      </div>
+      <!--this closes job-1-->
+      <div class="job-2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          incidunt natus quaerat itaque nulla. Deserunt nostrum facere explicabo
+          vitae beatae ducimus praesentium possimus sapiente debitis voluptas
+          consectetur, numquam excepturi impedit?
+        </p>
+        <ul>
+          <li>One thing I did.</li>
+          <li>Another thing I did.</li>
+          <li>Oh yeah, this too.</li>
+        </ul>
+      </div>
+      <!--this closes job-2-->
+    </section>
+    <section class="human-background">
+      <div class="education"></div>
+      <div class="passions"></div>
+      <div class="philosophy"></div>
+    </section><!--this closes the human-background section-->
+    <section class="social">
+      <div class="github"></div>
+      <div class="twitter"></div>
+      <div class="linkedin"></div>
+      <div class="facebook"></div>
+    </section>
+  </body>
 </html>
