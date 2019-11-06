@@ -134,10 +134,59 @@ html,
 body {
   height: 100%;
 }
+h2 {
+  font-size: 20px;
+}
 body {
   width: 1080px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
+}
+nav a {
+  margin: 0 10px 0 30px;
+}
+header {
+  margin: 10px 10px;
+}
+header .name h1 {
+  font-size: 40px;
+}
+header .job h2 {
+  font-size: 20px;
+  color: grey;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+}
+header .contact-container {
+  margin: 20px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .contact-container div {
+  margin: 20px;
+}
+header .contact-container div a:link {
+  text-decoration: none;
+}
+.intro-container {
+  margin: 10px 10px;
   display: flex;
 }
-h1 {
-  font-size: 40px;
+.intro-container div {
+  width: 50%;
+}
+.intro-container .intro h2 {
+  margin-bottom: 10px;
 }

@@ -59,12 +59,86 @@ html, body {
 
 // My code starts here
 
+@body-font: 'Open Sans', sans-serif;
+@tablet: 767px;
+
+
+h2 {
+	font-size:20px;
+}
 
 body {
 	width:1080px;
-	display:flex;
+	margin: 0 auto;
+	font-family: @body-font;
 }
 
-h1 {
-	font-size:40px;
+// Here is the code for the nav bar
+nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 40px;
+
+	a {
+		margin: 0 10px 0 30px;
+	}
+
+	@media (max-width:500px) {}
 }
+
+// Here is the code for the header
+
+header {
+	margin: 10px 10px;
+	
+	.name h1 {
+		font-size: 40px;
+	}
+
+	.job h2 {
+		font-size: 20px;
+		color: grey;
+		margin-top: 10px;
+	}
+
+	@media (max-width:767px) {
+		display: flex;
+		justify-content: center;
+	}
+
+	.contact-container {
+		margin: 20px;
+		width: 50%;
+		display: flex;
+		flex-wrap: wrap;
+
+		div {
+			margin: 20px;
+			
+			a:link {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+// Here is the code for the High Five section
+
+.intro-container {
+	margin: 10px 10px;
+	display: flex;
+
+	div {
+		width: 50%;
+	}
+
+	.intro {
+		
+		h2 {
+			margin-bottom: 10px;
+		}
+	}
+}
+
