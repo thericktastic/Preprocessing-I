@@ -222,7 +222,7 @@ header .contact-container div {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 2rem;
   }
   header .contact-container div {
@@ -324,6 +324,7 @@ header .contact-container div {
     margin: 30px 0px;
   }
   .work-history h3 {
+    text-align: center;
     font-size: 3rem;
     margin-bottom: 15px;
   }
@@ -362,7 +363,7 @@ header .contact-container div {
   }
   .human-background div {
     width: 100%;
-    padding: 30px 40px 30px 40px;
+    padding: 40px 40px 30px 40px;
   }
   .human-background div h3 {
     text-align: center;
