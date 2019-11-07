@@ -50,10 +50,385 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	font-size: 62.5%;
+	box-sizing: border-box;
+	color: @sec-color;
+	line-height: 1.2rem;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+// My code starts here
+
+@body-font: 'Open Sans', sans-serif;
+@mobile-font-size: 2rem;
+@mobile-ln-ht: 2.5rem;
+@mobile-h3: 3.0rem;
+@tablet: 767px;
+@prim-color: #bd8c7d;
+@sec-color: #49494b;
+@tert-color: #d1bfa7;
+@quat-color: #8e8e90;
+
+
+// Mixins
+.center(){
+	text-align: center;
+}
+
+.flex(){
+	display:flex;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+h2 {
+	font-size:20px;
+}
+
+ul {
+	list-style-type: disc;
+	margin-left: 20px;
+	line-height: 20px;
+}
+
+body {
+	width:1080px;
+	margin: 0 auto;
+	font-family: @body-font;
+	// background-image: url(/images/background.jpg);
+}
+
+// Here is the code for the nav bar
+nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 40px;
+	background-color: @tert-color;
+
+	a {
+		padding: 0 30px 0 0;
+	}
+
+	a:link {
+		color: black;
+	}
+
+	a:visited {
+		color: @prim-color;
+	}
+
+	a:hover {
+		color: @quat-color;
+	}
+
+	a:active {
+		color: black;
+	}
+
+
+	@media (max-width:500px) {
+		padding: 30px 0;
+		font-size: 1.6rem;
+		.flex();
+		justify-content: space-around;
+
+		a {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+// Here is the code for the header
+
+header {
+	padding: 20px;
+	
+	.name h1 {
+		font-size: 4rem;
+		color: @sec-color;
+	}
+
+	.job h2 {
+		font-size: 3rem;
+		color: @tert-color;
+		margin-top: 10px;
+	}
+
+	.contact-container {
+		margin-top: 20px;
+		width:60%;
+		.flex();	
+		flex-wrap: wrap;
+
+		div {
+			width: 200px;
+			margin: 10px;
+		}
+	}
+
+	@media (max-width:500px) {
+		.center();
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+
+		.contact-container {
+			width: 100%;
+			padding: 20px 0;
+			margin: 0;
+			.flex();			
+			flex-wrap: wrap;
+			justify-content: space-between;
+			font-size: @mobile-font-size;
+
+			div {
+				width: 45%;
+			}
+		}
+	}
+}
+
+
+// Here is the code for the High Five section
+
+.intro-container {
+	padding: 20px;
+	padding-bottom: 30px;
+	.flex();	
+	justify-content: space-between;
+	background-color: @tert-color;
+	color: @sec-color;
+
+	.intro {
+		width: 40%;
+	}
+	
+	div {
+		width: 20%;
+		h3 {
+			font-size: 1.4rem;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 1rem;
+			line-height: 1.2rem;
+		}
+
+		li {
+			font-size: 1rem;
+			line-height: 1.2rem;
+		}
+	}
+
+	@media (max-width:500px) {
+		padding: 0 0 20px 0;
+		.flex();	
+		flex-wrap: wrap;
+		justify-content: space-around;
+		background-color: @prim-color;
+
+		.intro {
+			padding: 40px;
+			width: 100%;
+			margin-bottom: 40px;
+			background-color: @tert-color;
+
+			h3 {
+				font-size: @mobile-h3;
+				.center();
+			}
+
+			p {
+				font-size: @mobile-font-size;
+				line-height: @mobile-ln-ht;
+			}
+		}
+
+		.soft-skills {
+			width: 30%;
+			margin-bottom: 20px;
+
+			h3 {
+				font-size: @mobile-h3;
+			}
+
+			li {
+				font-size: @mobile-font-size;
+				line-height: @mobile-ln-ht;
+			}
+		}
+
+		.hard-skills {
+			width: 30%;
+			margin-bottom: 20px;
+
+			h3 {
+				font-size: @mobile-h3;
+			}
+
+			li {
+				font-size: @mobile-font-size;
+				line-height: @mobile-ln-ht;
+			}
+		}
+	}
+
+}
+
+// Here is the code for the Work History section
+
+.work-history {
+	padding: 20px;
+
+	h3 {
+		font-size: 1.4rem;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	p {
+		line-height: 1.2rem;
+	}
+
+	@media (max-width: 500px) {
+		padding: 40px;
+
+		div {
+			margin: 30px 0px;
+		}
+		
+		h3 {
+			.center();
+			font-size: @mobile-h3;
+			margin-bottom: 15px;
+		}
+
+		h4 {
+			font-size: 2.2rem;
+		}
+	
+		p {
+			font-size: @mobile-font-size;
+			line-height: @mobile-ln-ht;
+			margin-bottom: 5px;
+		}
+
+		li {
+			font-size: @mobile-font-size;
+			line-height: @mobile-ln-ht;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+// Here is the code for the section containing Education, Passions, and Philosophy
+.human-background {
+	.flex();	
+	justify-content: space-between;
+	background-color: @tert-color;
+
+	div {
+		padding: 20px;
+		width: 25%;
+		line-height: 1.2rem;
+
+		h3 {
+			font-size: 1.4rem;
+			margin-bottom: 10px;
+		}
+
+
+	}
+
+	@media (max-width: 500px) {
+		.flex();	
+		flex-direction: column;
+
+		div {
+			width: 100%;
+			padding: 40px 40px 30px 40px;
+
+			h3 {
+				.center();
+				font-size: @mobile-h3;
+				margin-bottom: 30px;
+			}
+		}
+	
+		p {
+			font-size: @mobile-font-size;
+			line-height: @mobile-ln-ht;
+		}
+
+		li {
+			font-size: @mobile-font-size;
+			line-height: @mobile-ln-ht;
+		}
+
+		.education {
+			background-color: @tert-color;
+		}
+
+		.passions {
+			background-color: @prim-color;
+		}
+
+		.philosophy {
+			background-color: @tert-color;
+		}
+	}
+}
+
+.social {
+	.flex();	
+	justify-content: space-around;
+	font-size: 1rem;
+	padding: 20px 20px 40px 20px;
+
+	a:link {
+		color: black;
+	}
+
+	a:visited {
+		color: @prim-color;
+	}
+
+	a:hover {
+		color: @quat-color;
+	}
+
+	a:active {
+		color: black;
+	}
+
+	@media (max-width: 500px) {
+		font-size: @mobile-font-size;
+	}
+
+}
+
+footer {
+	font-size: .75rem;
+	.flex();	
+	justify-content: center;
+	
+	@media (max-width: 500px) {
+		font-size: 1.5rem;
+	}
+}
